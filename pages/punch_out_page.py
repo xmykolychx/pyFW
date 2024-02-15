@@ -1,6 +1,6 @@
 from pages.base_page import BasePage
 from utils.locators import PunchOutPageLocators
-from faker import Faker
+from utils.test_data import TestData
 
 
 class PunchOutPage(BasePage):
@@ -12,8 +12,7 @@ class PunchOutPage(BasePage):
         self.click(PunchOutPageLocators.calendar_today_button)
 
     def enter_notes(self):
-        fake = Faker()
-        self.enter_text(PunchOutPageLocators.notes_input, fake.pystr(min_chars=10, max_chars=100))
+        self.enter_text(PunchOutPageLocators.notes_input, TestData.text_data)
 
     def click_out(self):
         self.click(PunchOutPageLocators.out_button)
