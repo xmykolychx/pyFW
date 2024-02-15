@@ -35,6 +35,11 @@ class PersonalDetailsPage(BasePage):
         self.click(PersonalDetailsPageLocators.marital_status_dropdown)
         self.click(PersonalDetailsPageLocators.marital_status_other)
 
+    def set_male_gender(self):
+        self.click(PersonalDetailsPageLocators.gender_male_radio_button)
+
+    def set_female_gender(self):
+        self.click(PersonalDetailsPageLocators.gender_female_radio_button)
 
     def click_save_button(self):
         self.click(PersonalDetailsPageLocators.personal_details_save_button)

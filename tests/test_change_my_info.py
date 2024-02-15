@@ -4,7 +4,7 @@ def test_change_personal_details(driver, login, dashboard_page, personal_details
     personal_details_page.set_ids()
     personal_details_page.set_license()
     personal_details_page.set_marital_status()
-    personal_details_page.set_gender()
+    personal_details_page.set_female_gender()
     personal_details_page.click_save_button()
 
 
